@@ -51,6 +51,51 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-博客系统搭建过程" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    
+      <header class="article-header">
+        
+  
+    <a class="article-title" href="/2018/03/18/博客系统搭建过程/">博客系统搭建过程</a>
+  
+
+      </header>
+    
+    <time class="article-date" datetime="2018-03-18T12:09:35.000Z" itemprop="datePublished">03-18-2018</time>
+    
+  </div>
+  <div class="article-inner">
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1：下载和生存hexo<br>进入一个安全的目录，比如 cd ~/Desktop<br>在 GitHub 上新建一个空 repo，repo 名称是「minx1995.github.io」<br>npm install -g hexo-cli，安装 Hexo</p>
+<p>hexo init myBlog</p>
+<p>cd myBlog<br>npm i<br>2:更改配置文件<br>start _config.yml，编辑网站配置</p>
+<p>把第 6 行的 title 改成狗窝</p>
+<p>把第 9 行的 author 改成Ming Ho</p>
+<p>把最后一行的 type 改成 type: git</p>
+<p>在最后一行后面新增一行，左边与 type 平齐，加上一行 repo: <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:minx1995/minx1995.github.io.git<br> repo: 后面有个空格。</p>
+<p>npm install hexo-deployer-git –save，安装 git 部署插件</p>
+<p>3.写博客<br>hexo new 博客名</p>
+<p>cd  source/_posts/下</p>
+<p>start 博客名   在这里就可以编辑博客内容了</p>
+<p>编辑完成后 I： hexo generate</p>
+<p>然后 II：hexo deploy 刷新内容<br>每次写了博客后都要重复 I ，II步骤</p>
+<p>4.创建博客代码存库<br>cd /blog/source/_posts/下<br>ll<br>这时候你可以看到网站代码文件<br>git remote add origin <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:minx1995/blog-generator.git<br>执行上面指定好链接后<br>git add 目录下所有的代码文件用空格隔开（第一次要添加所有，后面发布的只需要添加增加的即可）<br>git commit -m “first commit”<br>git push -u origin master 推送即可</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/03/18/博客系统搭建过程/" data-id="cjewreojs0004souw77h9jb9s" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-常用的命令" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     
@@ -74,7 +119,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/18/常用的命令/" data-id="cjewq2iqc00030wuwmetsw9l1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/03/18/常用的命令/" data-id="cjewreojp0002souw2jfl62mh" class="article-share-link">Share</a>
       
       
     </footer>
@@ -107,7 +152,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/18/入门/" data-id="cjewq2iq800010wuw7ghqac98" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/03/18/入门/" data-id="cjewreojm0001souwpti9k836" class="article-share-link">Share</a>
       
       
     </footer>
@@ -139,7 +184,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/18/第二篇博客/" data-id="cjewq2iqb00020wuwwwlhsy68" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/03/18/第二篇博客/" data-id="cjewreojr0003souwy52s48y8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -179,7 +224,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/18/hello-world/" data-id="cjewq2iq200000wuwklbeimsy" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/03/18/hello-world/" data-id="cjewreojh0000souwmfqpb2ie" class="article-share-link">Share</a>
       
       
     </footer>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>博客系统搭建过程 | Dog house</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1：下载和生存hexo进入一个安全的目录，比如 cd ~/Desktop在 GitHub 上新建一个空 repo，repo 名称是「minx1995.github.io」npm install -g hexo-cli，安装 Hexo hexo init myBlog cd myBlognpm i2:更改配置文件start _config.yml，编辑网站配置 把第 6 行的 title 改成狗窝">
+<meta property="og:type" content="article">
+<meta property="og:title" content="博客系统搭建过程">
+<meta property="og:url" content="http://yoursite.com/2018/03/18/博客系统搭建过程/index.html">
+<meta property="og:site_name" content="Dog house">
+<meta property="og:description" content="1：下载和生存hexo进入一个安全的目录，比如 cd ~/Desktop在 GitHub 上新建一个空 repo，repo 名称是「minx1995.github.io」npm install -g hexo-cli，安装 Hexo hexo init myBlog cd myBlognpm i2:更改配置文件start _config.yml，编辑网站配置 把第 6 行的 title 改成狗窝">
+<meta property="og:updated_time" content="2018-03-18T12:10:01.739Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="博客系统搭建过程">
+<meta name="twitter:description" content="1：下载和生存hexo进入一个安全的目录，比如 cd ~/Desktop在 GitHub 上新建一个空 repo，repo 名称是「minx1995.github.io」npm install -g hexo-cli，安装 Hexo hexo init myBlog cd myBlognpm i2:更改配置文件start _config.yml，编辑网站配置 把第 6 行的 title 改成狗窝">
+  
+    <link rel="alternative" href="/atom.xml" title="Dog house" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Dog house</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-home-icon" class="nav-icon" href="/"></a>
+        
+          <a id="nav-archives-icon" class="nav-icon" href="/archives"></a>
+        
+          <a id="nav-about-icon" class="nav-icon" href="/about"></a>
+        
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+      </nav>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-博客系统搭建过程" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      博客系统搭建过程
+    </h1>
+  
+
+      </header>
+    
+    <time class="article-date" datetime="2018-03-18T12:09:35.000Z" itemprop="datePublished">03-18-2018</time>
+    
+  </div>
+  <div class="article-inner">
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1：下载和生存hexo<br>进入一个安全的目录，比如 cd ~/Desktop<br>在 GitHub 上新建一个空 repo，repo 名称是「minx1995.github.io」<br>npm install -g hexo-cli，安装 Hexo</p>
+<p>hexo init myBlog</p>
+<p>cd myBlog<br>npm i<br>2:更改配置文件<br>start _config.yml，编辑网站配置</p>
+<p>把第 6 行的 title 改成狗窝</p>
+<p>把第 9 行的 author 改成Ming Ho</p>
+<p>把最后一行的 type 改成 type: git</p>
+<p>在最后一行后面新增一行，左边与 type 平齐，加上一行 repo: <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:minx1995/minx1995.github.io.git<br> repo: 后面有个空格。</p>
+<p>npm install hexo-deployer-git –save，安装 git 部署插件</p>
+<p>3.写博客<br>hexo new 博客名</p>
+<p>cd  source/_posts/下</p>
+<p>start 博客名   在这里就可以编辑博客内容了</p>
+<p>编辑完成后 I： hexo generate</p>
+<p>然后 II：hexo deploy 刷新内容<br>每次写了博客后都要重复 I ，II步骤</p>
+<p>4.创建博客代码存库<br>cd /blog/source/_posts/下<br>ll<br>这时候你可以看到网站代码文件<br>git remote add origin <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:minx1995/blog-generator.git<br>执行上面指定好链接后<br>git add 目录下所有的代码文件用空格隔开（第一次要添加所有，后面发布的只需要添加增加的即可）<br>git commit -m “first commit”<br>git push -u origin master 推送即可</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/03/18/博客系统搭建过程/" data-id="cjewreojs0004souw77h9jb9s" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/03/18/常用的命令/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">常用的命令</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Ming HO<br>
+      <a href="https://github.com/steven5538/hexo-theme-athena" target="_blank">Athena</a> by <a href="http://steven5538.tw" target="_blank">Steven5538</a> | Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>
