@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/03/21/HTML常用命令/index.html">
 <meta property="og:site_name" content="Dog house">
 <meta property="og:description" content="什么是HTMLHyper Text Markup Language，超级文本标记语言  普通文本a:无特殊意义,超级文本&amp;lt;a&amp;gt;:超链接 超文本：文本具备特殊的功能 标记：超文本的组成形式&amp;lt;a&amp;gt; 语言：拥有自己的语法结构  用该语言编写的文件，以.html 或 .htm为后缀,用来设计网页由浏览器解释运行，可以嵌入脚本语言编写的程序片段，如JSHTML基础语法1- 标记语法标">
-<meta property="og:updated_time" content="2018-03-21T09:34:16.795Z">
+<meta property="og:updated_time" content="2018-03-21T09:39:08.480Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTML常用命令">
 <meta name="twitter:description" content="什么是HTMLHyper Text Markup Language，超级文本标记语言  普通文本a:无特殊意义,超级文本&amp;lt;a&amp;gt;:超链接 超文本：文本具备特殊的功能 标记：超文本的组成形式&amp;lt;a&amp;gt; 语言：拥有自己的语法结构  用该语言编写的文件，以.html 或 .htm为后缀,用来设计网页由浏览器解释运行，可以嵌入脚本语言编写的程序片段，如JSHTML基础语法1- 标记语法标">
@@ -115,33 +115,14 @@ valign：该行内容的垂直对齐方式，取值: top/middle/bottom
 bgcolor：设置表格的背景颜色
 </code></pre></li>
 </ul>
-<p>【标签】&lt;td&gt;&lt;/td&gt; （创建单元格）<br>【属性】<br>        align：内容水平对齐方式<br>        valign：内容垂直对齐方式<br>        width ：宽度<br>        height ：高度<br>【标签】&lt;caption&gt;&lt;/caption&gt; （表格标题）<br>【标签】&lt;th&gt;&lt;/th&gt; （列标题）<br>        行标题或列标题，字体有加粗的效果，放在tr中<br>【标签】&lt;thead&gt;&lt;/thead&gt; （表头）<br>【标签】&lt;tbody&gt;&lt;/tbody&gt; 表主体）<br>【标签】&lt;tfoot&gt;&lt;/tfoot&gt; （表尾）<br>一个完整的表格<br>&lt;caption&gt;标题文本&lt;/caption&gt;<br>&lt;table&gt;<br>   &lt;thead&gt;<br>    &lt;tr&gt;<br>      &lt;td&gt;姓名&lt;/td&gt;<br>       &lt;td&gt;性别&lt;/td&gt;<br>    &lt;/tr&gt;<br>  &lt;/thead&gt;<br>  &lt;tbody&gt;<br>    &lt;tr&gt;<br>      &lt;td&gt;张三&lt;/td&gt;<br>      &lt;td&gt;男&lt;/td&gt;<br>    &lt;/tr&gt;<br>    &lt;tr&gt;<br>      &lt;td&gt;李四&lt;/td&gt;<br>      &lt;td&gt;女&lt;/td&gt;<br>    &lt;/tr&gt;<br>  &lt;/tbody&gt;<br>&lt;/table&gt;<br>两行两列的表格<br>&lt;table&gt;<br>  &lt;tr&gt;<br>    &lt;td&gt;&lt;/td&gt;<br>    &lt;td&gt;&lt;/td&gt;<br>  &lt;/tr&gt;<br>  &lt;tr&gt;<br>    &lt;td&gt;&lt;/td&gt;<br>    &lt;td&gt;&lt;/td&gt;<br>  &lt;/tr&gt;<br>&lt;/table&gt;<br>表格的其他应用<br>（1）不规则表格</p>
-<ul>
-<li>跨列：从指定单元格位置处，横向向右合并几个（包含自己）单元格<br>属性：colspan=值（数字，合并单元格的个数）;</li>
-<li>跨行：从指定单元格位置处，纵向向下合并几个（包含自己）单元格<br>属性：rowspan=值（数字，合并单元格的个数）;<br>（2）表格的嵌套<br>在单元格中去嵌套另一个表格，但嵌套的表格必须要放在td中<br>5- 列表<br>将一组具有相似特征或者具有先后顺序的内容按照从上到下的顺序排列在一起<br>有序列表<br>&lt;ol&gt;<br>  &lt;li&gt;&lt;/li&gt;<br>&lt;/ol&gt;<br>【属性】<pre><code>type:指定列表项标志的类型，默认为数字排列
-取值：1（默认值）/a/A/i/I
-start:定义起始值(数字)，默认从1开始
-取值：数字，如：start:1;  start:i;等 
-</code></pre>无序列表<br>&lt;ul&gt;<br>   &lt;li&gt;&lt;/li&gt;<br>&lt;/ul&gt;<br>【属性】<pre><code>type：指定无序列表的列表项标识
-取值： disc,默认,实心圆/circle，空心圆/square，实心矩形none，不显示标识
-</code></pre>自定义列表<br>&lt;dl&gt;<br>&lt;dt&gt;列表中的标题内容&lt;/dt&gt;<br>&lt;dd&gt;列表中的数据&lt;/dd&gt;<br>&lt;/dl&gt;<br>使用场合：图文混排时使用<br>6- 表单<br>由&lt;form&gt;定义，将用户输入的数据提交给后台。<br>【常见属性】<pre><code>action：提交的服务器地址
-method：表单数据提交的方式，取值： get：明文提交/post：隐式提交
-name：定义表单名称，JS用到的比较多
-id： 独一无二的标识
-</code></pre>如：&lt;form action=”url” method=”get/post”&gt; &lt;/form&gt;<br>&lt;input&gt;元素<br>【主要属性】<pre><code>type：根据不同的type属性值可以创建各种类型的输入字段
-value：最终提交给服务器的值
-name：控件的名称，提供给服务器使用，没有name，控件则无法提交
-id：唯一标识，只能在当前页面使用，服务器不能用
-disabled：禁用，不能被提交
-</code></pre></li>
-</ul>
+<p>【标签】&lt;td&gt;&lt;/td&gt; （创建单元格）<br>【属性】<br>        align：内容水平对齐方式<br>        valign：内容垂直对齐方式<br>        width ：宽度<br>        height ：高度<br>【标签】&lt;caption&gt;&lt;/caption&gt; （表格标题）<br>【标签】&lt;th&gt;&lt;/th&gt; （列标题）<br>        行标题或列标题，字体有加粗的效果，放在tr中<br>【标签】&lt;thead&gt;&lt;/thead&gt; （表头）<br>【标签】&lt;tbody&gt;&lt;/tbody&gt; 表主体）<br>【标签】&lt;tfoot&gt;&lt;/tfoot&gt; （表尾）<br>表格的其他应用<br>（1）不规则表格<br>  跨列：从指定单元格位置处，横向向右合并几个（包含自己）单元格<br>  属性：colspan=值（数字，合并单元格的个数）; 跨行：从指定单元格位置处，纵向向下合并几个（包含自己）单元格<br>  属性：rowspan=值（数字，合并单元格的个数）;<br>（2）表格的嵌套<br>  在单元格中去嵌套另一个表格，但嵌套的表格必须要放在td中<br>5- 列表<br>将一组具有相似特征或者具有先后顺序的内容按照从上到下的顺序排列在一起<br>有序列表<br>&lt;ol&gt;<br>    &lt;li&gt;&lt;/li&gt;<br>&lt;/ol&gt;<br>【属性】<br>        type:指定列表项标志的类型，默认为数字排列<br>        取值：1（默认值）/a/A/i/I<br>        start:定义起始值(数字)，默认从1开始<br>        取值：数字，如：start:1;  start:i;等<br>无序列表<br>&lt;ul&gt;<br>     &lt;li&gt;&lt;/li&gt;<br>&lt;/ul&gt;<br>【属性】<br>        type：指定无序列表的列表项标识<br>        取值： disc,默认,实心圆/circle，空心圆/square，实心矩形none，不显示标识<br>自定义列表<br>&lt;dl&gt;<br>  &lt;dt&gt;列表中的标题内容&lt;/dt&gt;<br>  &lt;dd&gt;列表中的数据&lt;/dd&gt;<br>&lt;/dl&gt;<br>使用场合：图文混排时使用<br>6- 表单<br>由&lt;form&gt;定义，将用户输入的数据提交给后台。<br>【常见属性】<br>        action：提交的服务器地址<br>        method：表单数据提交的方式，取值： get：明文提交/post：隐式提交<br>        name：定义表单名称，JS用到的比较多<br>        id： 独一无二的标识<br>如：&lt;form action=”url” method=”get/post”&gt; &lt;/form&gt;<br>&lt;input&gt;元素<br>【主要属性】<br>        type：根据不同的type属性值可以创建各种类型的输入字段<br>        value：最终提交给服务器的值<br>        name：控件的名称，提供给服务器使用，没有name，控件则无法提交<br>        id：唯一标识，只能在当前页面使用，服务器不能用<br>        disabled：禁用，不能被提交</p>
 <p>常用的表单控件：</p>
 <p>（1）文本框：&lt;input type=”text”&gt;<br>（2）密码框：&lt;input type=”password”&gt;<br> 【专有属性】<br>         maxlength：限制输入的字符数，取值：数字<br>         readonly：设置文本控件只读<br>（3）单选按钮：&lt;input type=”radio”&gt;<br>（4）复选框：&lt;input type=”checkbox”&gt;<br>【专有属性】<br>         checked，设置默认被选中<br>（5）提交按钮：&lt;input type=”submit”&gt;<br>（6）重置按钮：&lt;input type=”reset”&gt;<br>（7）普通按钮：&lt;input type=”button”&gt;<br>（8）图片按钮：&lt;input type=”image” src=””&gt;<br>（9）隐藏域：&lt;input type=”hidden”&gt;<br>（10）文件选择框：&lt;input type=”file”&gt;<br>按钮（提交按钮）<br>&lt;button&gt;内容&lt;/button&gt;<br>下拉选择框select 和 option<br>&lt;section name=””&gt;<br>  &lt;option value=”” selected&gt;&lt;/option&gt;<br>&lt;/section&gt;<br>7- 结构标记<br>HTML5所提供的结构标记，专门用于表示常见的网页结构（即制作布局），提升布局代码的语义性和可读性<br>常见结构标记<br>&lt;header&gt;&lt;/header&gt;：定义文档的页眉即页面顶部信息<br>&lt;nav&gt;&lt;/nav&gt;：定义页面的导航链接部分<br>&lt;section&gt;&lt;/section&gt;：定义文档中的节，文档中主体内容<br>&lt;article&gt;&lt;/article&gt; ：定义独立于文档的其他部分内容(章、节等)<br>&lt;footer&gt;&lt;/footer&gt;：定义某区域的脚注信息，页面底部内容等<br>&lt;aside&gt;&lt;/aside&gt;：多用于侧边栏和相关引用信息等</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/21/HTML常用命令/" data-id="cjf0w5mig0000ewuwoyuby4d1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/03/21/HTML常用命令/" data-id="cjf0wbx3900019kuwqpofgxde" class="article-share-link">Share</a>
       
       
     </footer>
