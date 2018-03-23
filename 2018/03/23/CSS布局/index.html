@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>CSS布局 | Dog house</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="CSS左右布局给子元素加float:left;给父元素的class加上clearfix。但是要给父元素清除高度塌陷代码如下：.clearfix:befor,.clearfix:after{    content:’’;    display:block;}.clearfix{    clear:both;} CSS左中右布局float+absolute方式：    &amp;lt;style type=”">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS布局">
+<meta property="og:url" content="http://yoursite.com/2018/03/23/CSS布局/index.html">
+<meta property="og:site_name" content="Dog house">
+<meta property="og:description" content="CSS左右布局给子元素加float:left;给父元素的class加上clearfix。但是要给父元素清除高度塌陷代码如下：.clearfix:befor,.clearfix:after{    content:’’;    display:block;}.clearfix{    clear:both;} CSS左中右布局float+absolute方式：    &amp;lt;style type=”">
+<meta property="og:updated_time" content="2018-03-23T14:30:56.564Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS布局">
+<meta name="twitter:description" content="CSS左右布局给子元素加float:left;给父元素的class加上clearfix。但是要给父元素清除高度塌陷代码如下：.clearfix:befor,.clearfix:after{    content:’’;    display:block;}.clearfix{    clear:both;} CSS左中右布局float+absolute方式：    &amp;lt;style type=”">
+  
+    <link rel="alternative" href="/atom.xml" title="Dog house" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Dog house</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-home-icon" class="nav-icon" href="/"></a>
+        
+          <a id="nav-archives-icon" class="nav-icon" href="/archives"></a>
+        
+          <a id="nav-about-icon" class="nav-icon" href="/about"></a>
+        
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+      </nav>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-CSS布局" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      CSS布局
+    </h1>
+  
+
+      </header>
+    
+    <time class="article-date" datetime="2018-03-23T14:01:18.000Z" itemprop="datePublished">03-23-2018</time>
+    
+  </div>
+  <div class="article-inner">
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p></p><h1>CSS左右布局</h1><br>给子元素加float:left;给父元素的class加上clearfix。<br>但是要给父元素清除高度塌陷<br>代码如下：<br>.clearfix:befor,<br>.clearfix:after{<br>    content:’’;<br>    display:block;<br>}<br>.clearfix{<br>    clear:both;<br>}<p></p>
+<p></p><h1>CSS左中右布局</h1><br>float+absolute方式：<br>    &lt;style type=”text/css”&gt;<p></p>
+<pre><code>    #content{
+        position: relative;
+        width:100%;
+        height:300px;
+    }
+    .left{
+        float: left;
+        width: 200px;
+        height:100%;
+        background-color: #00a0dc;
+    }
+    .middle{
+        position: absolute;
+        top:0;
+        bottom:0;
+        left:200px;
+        right: 300px;
+        background-color: red;
+    }
+    .right{
+        float: right;
+        height:100%;
+        width: 300px;
+        background-color: #00a0dc;
+    }
+&amp;lt;/style&amp;gt;
+</code></pre><p>float+margin方式：<br> &lt;style type=”text/css”&gt;</p>
+<pre><code>    #content{
+        height:300px;
+    }
+    .left{
+        width: 200px;
+        height:100%;
+        float: left;
+        background-color: #00a0dc;
+    }
+    .middle{
+        height:100%;
+        margin-left:200px;
+        margin-right: 300px;
+        background-color: red;
+    }
+    .right{
+        height:100%;
+        width: 300px;
+        float: right;
+        background-color: #00a0dc;
+    }
+&amp;lt;/style&amp;gt;
+</code></pre><p>HTML代码：<br>&lt;div id=”content”&gt;<br>    &lt;div class=”left”&gt;&lt;/div&gt;<br>    &lt;div class=”middle”&gt;&lt;/div&gt;<br>    &lt;div class=”right”&gt;&lt;/div&gt;<br>&lt;/div&gt;</p>
+<p></p><h1>水平居中</h1><br>margin和width实现水平居中：<br>在分页容器上定义一个宽度，然后配合margin的左右值为“auto”实现效果：<br>.pagination {<br>  width: 293px;<br>  margin-left: auto;<br>  margin-right: auto;<br>}<br>.pagination li {<br>  line-height: 25px;<br>display: inline;<br>  float: left;<br>  margin: 0 5px;<br>inline-block实现水平居中：<br>要在元素的父容器中设置text-align的属性为“center“：<br>.pagination {<br>  text-align: center;<br>  font-size: 0;<br>  letter-spacing: -4px;<br>  word-spacing: -4px;<br>}<br>.pagination li {<br>  line-height: 25px;<br>  margin: 0 5px;<br>display: inline-block;<br>  *display: inline;<br>  zoom:1;<br>  letter-spacing: normal;<br>  word-spacing: normal;<br>  font-size: 12px;<br>}<p></p>
+<p></p><h1>CSS垂直居中</h1><br>方法1：使用了一个 position:absolute，有固定宽度和高度的 div。这个 div 被设置为 top:0; bottom:0;。但是因为它有固定高度，其实并不能和上下都间距为 0，因此 margin:auto; 会使它居中。使用 margin:auto;使块级元素垂直居中是很简单的。<p></p>
+<p>&lt;div id=”content”&gt; Content here&lt;/div&gt;  </p>
+<p>#content {<br>    position: absolute;<br>    top: 0;<br>    bottom: 0;<br>    left: 0;<br>    right: 0;<br>    margin: auto;<br>    height: 240px;<br>    width: 70%;<br>}<br>方法2：只能将单行文本置中。只需要简单地把 line-height 设置为那个对象的 height 值就可以使文本居中了。</p>
+<p>&lt;div id=”content”&gt; Content here&lt;/div&gt;  </p>
+<p>#content {<br>    height: 100px;<br>    line-height: 100px;<br>}</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/03/23/CSS布局/" data-id="cjf41opfs0000uguw1uiohuj5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/03/21/HTML常用命令/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">HTML常用命令</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Ming HO<br>
+      <a href="https://github.com/steven5538/hexo-theme-athena" target="_blank">Athena</a> by <a href="http://steven5538.tw" target="_blank">Steven5538</a> | Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>
