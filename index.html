@@ -51,6 +51,38 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-自己编写API过程和细节" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    
+      <header class="article-header">
+        
+  
+    <a class="article-title" href="/2018/05/26/自己编写API过程和细节/">自己编写API过程和细节</a>
+  
+
+      </header>
+    
+    <time class="article-date" datetime="2018-05-26T06:57:37.000Z" itemprop="datePublished">05-26-2018</time>
+    
+  </div>
+  <div class="article-inner">
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>window.JQuery = function(xxx){<br>  let nodes = {}//命名一个nodes的伪数组，用来接收节点，并且通过它来操作节点<br>  if (typeof xxx === ‘string’)//判断接收到的值是否是一个字符串，如果是就查找名为接受值的所有节点，并且放到nodes里面<br>    {<br>       let tmp = document.queryselectorAll(xxx)//如果此时直接打印出tmp它会带有–protot–这样多余的原型链，所以把它接收到的又重新放入nodes里可以得到纯净的原型链<br>       for(let i=0;i &lt; tmp.length;i++){<br>         nodes[i] = tmp[i]<br>       }<br>      nodes.length = tmp.length<br>    }else if (xxx instanceof  Node)//如果接收到的值已经代表一个节点了，也把它放到nodes里面（保持返回一致性），当做一个长度为1的数组，也就是单纯的一个节点来操作<br>    {<br>      nodes = {<br>        0:xxx<br>        length: 1<br>      }<br>      }<br>  nodes.addclass =  function(classses)//调用属性后遍历classes的值，依次给nodes添加class<br>  {<br>    classses.forEach(function(value,key){<br>      for(let i=0;i &lt; nodes.length;i++){<br>       nodes[i].classList.add(value)<br>      }<br>    })<br>    }<br>  nodes.settext = function(setvalue)//遍历nodes，将节点的文本替换为接收的setvalue<br>  {<br>    for(let i=o;i&lt; nodes.length;i++){<br>      nodes[i].textcontent = setvalue<br>    }<br>  }<br>  return nodes<br>}</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/05/26/自己编写API过程和细节/" data-id="cjhn3ai3500081kuwonzoigmg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-CSS布局" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     
@@ -130,7 +162,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/23/CSS布局/" data-id="cjf41opfs0000uguw1uiohuj5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/03/23/CSS布局/" data-id="cjhn3ai2o00001kuw4nmhuy8u" class="article-share-link">Share</a>
       
       
     </footer>
@@ -207,7 +239,7 @@ bgcolor：设置表格的背景颜色
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/21/HTML常用命令/" data-id="cjf41opfy0001uguw18rbe9vf" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/03/21/HTML常用命令/" data-id="cjhn3ai2v00011kuwav6eac2x" class="article-share-link">Share</a>
       
       
     </footer>
@@ -250,7 +282,7 @@ bgcolor：设置表格的背景颜色
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/19/请求和响应-md/" data-id="cjf41opgb0007uguwpfofwxwc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/03/19/请求和响应-md/" data-id="cjhn3ai3300071kuw9tyqpxao" class="article-share-link">Share</a>
       
       
     </footer>
@@ -295,7 +327,7 @@ bgcolor：设置表格的背景颜色
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/18/博客系统搭建过程/" data-id="cjf41opg40004uguwrejq0cun" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/03/18/博客系统搭建过程/" data-id="cjhn3ai3000041kuwmtqm9szb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -328,7 +360,7 @@ bgcolor：设置表格的背景颜色
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/18/常用的命令/" data-id="cjf41opg80006uguwzgbjliny" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/03/18/常用的命令/" data-id="cjhn3ai3200061kuwza7grorq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -361,7 +393,7 @@ bgcolor：设置表格的背景颜色
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/18/入门/" data-id="cjf41opg10002uguwkecx45sp" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/03/18/入门/" data-id="cjhn3ai2x00021kuwc61p82kj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -393,7 +425,7 @@ bgcolor：设置表格的背景颜色
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/18/第二篇博客/" data-id="cjf41opg60005uguwlu9a7tpl" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/03/18/第二篇博客/" data-id="cjhn3ai3100051kuwuv75eaq5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -433,7 +465,7 @@ bgcolor：设置表格的背景颜色
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/18/hello-world/" data-id="cjf41opg30003uguwji26ga1i" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/03/18/hello-world/" data-id="cjhn3ai2y00031kuw4y7fjkpg" class="article-share-link">Share</a>
       
       
     </footer>

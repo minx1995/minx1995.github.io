@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>自己编写API过程和细节 | Dog house</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="window.JQuery = function(xxx){  let nodes = {}//命名一个nodes的伪数组，用来接收节点，并且通过它来操作节点  if (typeof xxx === ‘string’)//判断接收到的值是否是一个字符串，如果是就查找名为接受值的所有节点，并且放到nodes里面    {       let tmp = document.queryselectorA">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自己编写API过程和细节">
+<meta property="og:url" content="http://yoursite.com/2018/05/26/自己编写API过程和细节/index.html">
+<meta property="og:site_name" content="Dog house">
+<meta property="og:description" content="window.JQuery = function(xxx){  let nodes = {}//命名一个nodes的伪数组，用来接收节点，并且通过它来操作节点  if (typeof xxx === ‘string’)//判断接收到的值是否是一个字符串，如果是就查找名为接受值的所有节点，并且放到nodes里面    {       let tmp = document.queryselectorA">
+<meta property="og:updated_time" content="2018-05-26T07:43:09.512Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="自己编写API过程和细节">
+<meta name="twitter:description" content="window.JQuery = function(xxx){  let nodes = {}//命名一个nodes的伪数组，用来接收节点，并且通过它来操作节点  if (typeof xxx === ‘string’)//判断接收到的值是否是一个字符串，如果是就查找名为接受值的所有节点，并且放到nodes里面    {       let tmp = document.queryselectorA">
+  
+    <link rel="alternative" href="/atom.xml" title="Dog house" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Dog house</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-home-icon" class="nav-icon" href="/"></a>
+        
+          <a id="nav-archives-icon" class="nav-icon" href="/archives"></a>
+        
+          <a id="nav-about-icon" class="nav-icon" href="/about"></a>
+        
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+      </nav>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-自己编写API过程和细节" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      自己编写API过程和细节
+    </h1>
+  
+
+      </header>
+    
+    <time class="article-date" datetime="2018-05-26T06:57:37.000Z" itemprop="datePublished">05-26-2018</time>
+    
+  </div>
+  <div class="article-inner">
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>window.JQuery = function(xxx){<br>  let nodes = {}//命名一个nodes的伪数组，用来接收节点，并且通过它来操作节点<br>  if (typeof xxx === ‘string’)//判断接收到的值是否是一个字符串，如果是就查找名为接受值的所有节点，并且放到nodes里面<br>    {<br>       let tmp = document.queryselectorAll(xxx)//如果此时直接打印出tmp它会带有–protot–这样多余的原型链，所以把它接收到的又重新放入nodes里可以得到纯净的原型链<br>       for(let i=0;i &lt; tmp.length;i++){<br>         nodes[i] = tmp[i]<br>       }<br>      nodes.length = tmp.length<br>    }else if (xxx instanceof  Node)//如果接收到的值已经代表一个节点了，也把它放到nodes里面（保持返回一致性），当做一个长度为1的数组，也就是单纯的一个节点来操作<br>    {<br>      nodes = {<br>        0:xxx<br>        length: 1<br>      }<br>      }<br>  nodes.addclass =  function(classses)//调用属性后遍历classes的值，依次给nodes添加class<br>  {<br>    classses.forEach(function(value,key){<br>      for(let i=0;i &lt; nodes.length;i++){<br>       nodes[i].classList.add(value)<br>      }<br>    })<br>    }<br>  nodes.settext = function(setvalue)//遍历nodes，将节点的文本替换为接收的setvalue<br>  {<br>    for(let i=o;i&lt; nodes.length;i++){<br>      nodes[i].textcontent = setvalue<br>    }<br>  }<br>  return nodes<br>}</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/05/26/自己编写API过程和细节/" data-id="cjhn3ai3500081kuwonzoigmg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/03/23/CSS布局/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">CSS布局</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Ming HO<br>
+      <a href="https://github.com/steven5538/hexo-theme-athena" target="_blank">Athena</a> by <a href="http://steven5538.tw" target="_blank">Steven5538</a> | Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>
